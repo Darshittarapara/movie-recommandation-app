@@ -1,8 +1,14 @@
+:root {
+  --main-header-backgroundColor : #606575;
+  --list-color: white;
+  --logo-odd-character-color: #2c2e2e;
+  --list-hover-color: #21232e;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif  'Source Sans Pro', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

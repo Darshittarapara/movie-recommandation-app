@@ -1,0 +1,34 @@
+.navbar-container {
+    .navbar-list  {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        justify-content: center;
+        .logo {
+            margin-right: 50px;
+        }
+        .odd, .even {
+            margin: 0px 2px;
+            font-weight: bolder;
+            font-size: 2.2rem;
+        }
+        .odd {
+            color: var(--logo-odd-character-color);
+        }
+        .even {
+            color: azure;
+        }
+        .nav-item {
+            margin: 0px 10px;
+            font-family: 600;
+            font-size: 20px;
+            transition: all 0.25s ease-in-out;
+            cursor: pointer;
+            color: var(--list-color);
+           
+            &:hover {
+                color: var(--list-hover-color);
+            }
+        }
+    }
+}
