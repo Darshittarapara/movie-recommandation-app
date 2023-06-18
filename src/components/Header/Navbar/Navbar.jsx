@@ -4,7 +4,51 @@ import { Strings } from 'utils/Strings/Strings'
 import { NavLink } from 'react-router-dom'
 import { constant } from 'utils/constant/const'
 import './Navbar.scss'
+import { PATHS } from 'utils/Paths/Paths'
+import MenuItem from 'components/MeuItem/MenuItem'
 export const Navbar = () => {
+    const navBarLinks = [
+        {
+            title: Strings.movies,
+            subMenuLinks: [
+                {
+                    title: Strings.popular,
+                    path: PATHS.movies.category.replace(":id", Strings.popularPath),
+                    isActive: false
+                },
+                {
+                    title: Strings.latest,
+                    path: PATHS.movies.category.replace(":id", Strings.latestPath),
+                    isActive: false
+                },
+                {
+                    title: Strings.topRated,
+                    path: PATHS.movies.category.replace(":id", Strings.topRatedPath),
+                    isActive: false
+                },
+            ]
+        },
+        {
+            title: Strings.tvShows,
+            subMenuLinks: [
+                {
+                    title: Strings.popular,
+                    path: PATHS.movies.category.replace(":id", Strings.popularPath),
+                    isActive: false
+                },
+                {
+                    title: Strings.latest,
+                    path: PATHS.movies.category.replace(":id", Strings.latestPath),
+                    isActive: false
+                },
+                {
+                    title: Strings.topRated,
+                    path: PATHS.movies.category.replace(":id", Strings.topRatedPath),
+                    isActive: false
+                },
+            ]
+        }
+    ]
     return (
         <div className='navbar-container'>
             <ul className='navbar-list'>
@@ -22,9 +66,9 @@ export const Navbar = () => {
 
                     </div>
                 </li>
-                <li className='nav-item'>
-                    <div>Home</div>
-                </li>
+                {navBarLinks.map((item, index) => {
+                    return <MenuItem key={`${index}`} title={item.title} menuLinks={item.subMenuLinks} />
+                })}
             </ul>
         </div>
     )

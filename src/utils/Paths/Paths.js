@@ -4,6 +4,7 @@
  */
 const PATHS = {
     home: "/",
+    pageNotFound: "*",
     search: "search?query=",
     movies: {
         category: "/movies/:id"
